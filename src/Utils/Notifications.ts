@@ -2,6 +2,13 @@ import { DEFAULT_TOAST_OPTIONS } from "@/Constants";
 import { ToastOptions, toast } from "react-toastify";
 import Swal from "sweetalert2";
 
+/**
+ * @class Toaster
+ * @description Singleton class to handle notifications
+ * @example
+ * Toaster.notify('Hello World', 'success', { autoClose: 2000, position: 'top-center' });
+ * Toaster.alert('Hello World');
+ */
 export default class Toaster {
     private static instance: Toaster;
 

@@ -1,11 +1,16 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from '@/Contexts/Theme.context';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import Toaster from '@/Utils/Notifications';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
     const { darkMode, setDarkMode } = useContext(ThemeContext);
+    const navigate = useNavigate();
+    useEffect(() => {
+        navigate('/');
+    }, []);
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
         Toaster.notify(`Dark mode ${darkMode ? 'disabled' : 'enabled'}`, 'info', { autoClose: 2000, position: 'top-center' });

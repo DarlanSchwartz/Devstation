@@ -1,7 +1,19 @@
 import Toaster from '@/Utils/Notifications';
 import { AxiosError, AxiosRequestConfig } from 'axios';
 import axios from 'axios';
-
+/**
+ * @class AxiosProvider
+ * @description Singleton class to handle Axios requests
+ * @example
+ * const api = new AxiosProvider('https://api.example.com', (error) => {
+ *    console.error(error);
+ * }, 'token');
+ * api.get('/users').then(response => console.log(response));
+ * api.post('/users', { name: 'John Doe' }).then(response => console.log(response));
+ * api.put('/users/1', { name: 'Jane Doe' }).then(response => console.log(response));
+ * api.delete('/users/1').then(response => console.log(response));
+ * 
+ */
 export default class AxiosProvider {
     public readonly provider;
     public readonly token;

@@ -6,8 +6,7 @@ import ResetStyle from '../Styles/ResetStyle';
 import { ToastContainer } from 'react-toastify';
 import useLocalStorage from '../Hooks/useLocalStorage.hook';
 import { createContext } from "react";
-import { ThemeContextProps } from './Theme';
-
+import { ThemeContextProps } from '../Protocols/Theme';
 
 export const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
 

@@ -1,5 +1,5 @@
 import AxiosProvider from "./Provider";
-import { UsersResponseDTO } from "./User";
+import { UsersResponseDTO } from "@/Protocols/User";
 
 const UserRoutes = {
     getAll: '/persons'

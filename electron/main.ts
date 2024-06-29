@@ -28,7 +28,7 @@ let win: BrowserWindow | null;
 
 function createWindow() {
   win = new BrowserWindow({
-    icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+    icon: path.join(process.env.VITE_PUBLIC, 'icon.png'),
     //autoHideMenuBar: true, Uncomment to hide the TOP menu bar
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
